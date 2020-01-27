@@ -1,0 +1,10 @@
+.srch{
+    background-color:blue;
+    outline: 0;
+    border: 0;
+    border-bottom: 2px solid white;
+
+}
+input:focus{
+    color:white
+}

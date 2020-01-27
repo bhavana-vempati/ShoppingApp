@@ -1,0 +1,107 @@
+.wrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.box_right{
+    width:25%;
+}
+.box_left{
+    width:75%;
+    border-radius: 5px;
+    margin-top: 12px;
+}
+.box_left .row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    padding: 0 4px 0 20px;
+    flex-direction: column;
+  }
+/* Create four equal columns that sits next to each other */
+.box_left .column {
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
+    border: 2px solid black;
+    background-color:white;
+    margin-bottom: 10px;
+    display: flex;
+  }
+  .prc_box {
+      width: 316px;
+      height: 200px;
+      border-radius: 5px;
+      border: 2px solid black;
+      padding: 50px;
+      margin: 12px 0px 12px 12px;
+      font-weight: bold;
+      background-color:white;
+  }
+  .img_box img {
+      width: 100%;
+      height: 100%;
+      padding: 10px;
+      background: transparent url('https://flevix.com/wp-content/uploads/2020/01/Bounce-Bar-Preloader-1.gif') center no-repeat;
+  }
+  .img_box{
+    width: 25%;
+    margin: 2px;
+    padding: 2px;
+    height: 100%;
+  }
+  .list_img{
+      width: 75%;
+  }
+  .cart{
+      width: 150px;
+      align-items: center;
+  }
+  .quant{
+    background-color: white;
+    border: 1px solid;
+    border-color: black;
+    width: 18px;
+    padding: 2px;
+    align-items: center;
+    border-radius: 13px;
+    text-align: center;
+    height: 28px;
+  }
+  .list_img > p{
+      padding-top: 5px;
+      padding-bottom: 5px;
+      padding-left: 10px;
+  }
+  .left_pr{
+      text-align: right;
+  }
+  .left_price{
+    color: rgb(222, 138, 11);
+    font-weight: bold;
+  }
+  .del_price{
+      padding-right: 10px;
+      color: green;
+  }
+  .btns_clr {
+    color:black;
+    background-color: orange;
+    border-color: orange;
+    border-radius: 10px;
+  }
+
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 800px) {
+    .box_left {
+      -ms-flex:100%;
+      flex: 100%;
+      max-width: 100%;
+    }
+    .box_right{
+        width:100%;
+    }
+  }
+  

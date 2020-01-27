@@ -1,0 +1,75 @@
+.box {
+  width: 75%;
+  float: right;
+}
+.box_filter {
+  width: 25%;
+}
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px 0 20px;
+  margin-top: 28px;
+}
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px 5px 20px;
+  height: 400px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 75%;
+  top: 0px;
+  height: 50%;
+  border: 1px solid black;
+  border-radius: 2px;
+  /* background: transparent
+    url("https://flevix.com/wp-content/uploads/2020/01/Bounce-Bar-Preloader-1.gif")
+    center no-repeat; */
+  background-size: 250px 250px;
+}
+.left_price {
+  float: right;
+  padding-right: 50px;
+  color: rgb(222, 138, 11);
+  font-weight: bold;
+}
+.del_price {
+  padding-right: 10px;
+  color: green;
+}
+.btns_clr {
+  color: black;
+  background-color: orange;
+  border-color: orange;
+  border-radius: 22px;
+}
+.btn_alg {
+  text-align: center;
+  padding-right: 80px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,40 @@
+<div class="wrapper">
+    <div class="box_left">
+        <div  class="row" >
+            <div *ngFor ="let f of data" class="column" >
+                <div class="img_box">
+                    <img src="{{f.img_url}}">
+                </div>
+                  
+                    <div class="list_img">
+                        <p>{{f.name}}</p>
+                       <p>&#x20B9;{{f.discountP}}<s class="del_price">{{f.price}}</s><span class="left_price">{{f.discount}}%off </span></p>
+                       <div class="input-group cart">
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-default btn-number" (click)="onMinus(f)" data-type="minus" data-field="quant[1]">
+                                <i class="fa fa-minus"></i>
+                            </button>
+                        </span>
+                        <input type="text" id="{{f.id}}" class="form-control input-number" value="{{f.quantity}}" min="1" max="10">
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-default btn-number" data-type="plus" (click)="onPlus(f)"data-field="quant[1]">
+                                <i class="fa fa-plus"></i>
+                            </button>
+                        </span>
+                    </div>
+                       <p class= "btn_alg"><button class="btn btn-primary btns_clr" (click)="remove(f)" >Remove</button></p>
+                    </div>
+               
+                </div>
+        </div>        
+    </div>
+    <div class="box_right">
+        <div class="prc_box">
+            <div><span>Price : </span><span class="left_pr" >&#x20B9;{{totalPrice}}</span></div>
+            <div><span>Discount : </span><span class="left_pr">&#x20B9;{{discount}}</span></div>
+            <hr>
+            <div><span>Total Payable : </span><span>&#x20B9;{{payable}}</span></div>
+        </div>
+    </div>
+ 
+</div>

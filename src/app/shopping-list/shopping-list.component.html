@@ -1,0 +1,24 @@
+
+<div>
+    <app-filter (value)="filterVal($event)" ></app-filter>
+    <div>
+        <app-sort [shopList] ="data"></app-sort>
+        <div>
+    <div class= "box">
+        <div  class="row" >
+            <div *ngFor ="let f of data" class="column" >
+                <img src="{{f.img_url}}" >
+                <p>{{f.name}}</p>
+                <p>&#x20B9;{{f.discountP}}<s class="del_price">{{f.price}}</s><span class="left_price">{{f.discount}}%off </span></p>
+                <p class= "btn_alg"><button class="btn btn-primary btns_clr" (click)="addtoCart(f)">Add to Cart</button></p>
+            </div>
+    
+        </div>
+        
+    </div>
+    
+</div>
+
+
+</div>
+</div>

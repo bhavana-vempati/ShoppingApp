@@ -1,0 +1,16 @@
+<div class="top-header">
+  <img
+    src="https://img.icons8.com/flat_round/64/000000/star--v1.png"
+    class="head-icon"
+    (click)="gohome()"
+  />
+
+  <div class="right_top">
+    <app-search *ngIf="show == true"></app-search>
+    <div>
+      <span><i class="fas fa-search fa-2x" (click)="search()"></i></span>
+      <span><i class="fas fa-shopping-cart fa-2x" (click)="goTo()"></i></span>
+      <div>hi{{ count }}</div>
+    </div>
+  </div>
+</div>
