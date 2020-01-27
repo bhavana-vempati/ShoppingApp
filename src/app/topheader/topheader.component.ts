@@ -1,25 +1,24 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
 
 @Component({
-  selector: 'app-topheader',
-  templateUrl: './topheader.component.html',
-  styleUrls: ['./topheader.component.css']
+  selector: "app-topheader",
+  templateUrl: "./topheader.component.html",
+  styleUrls: ["./topheader.component.css"]
 })
 export class TopheaderComponent implements OnInit {
   public show = false;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {}
 
-  ngOnInit() {
+  ngOnInit() {}
+  public gohome() {
+    this.router.navigate([""]);
   }
-  public gohome(){
-    this.router.navigate(['']);
+  public goTo() {
+    this.router.navigate(["cart"]);
   }
-public goTo(){
-  this.router.navigate(['cart']);
-}
-public search(){
- this.show =!this.show;
-}
+  public search() {
+    this.show = !this.show;
+  }
 }
